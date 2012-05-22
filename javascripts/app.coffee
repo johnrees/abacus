@@ -1,14 +1,15 @@
 jQuery ->
 
-  ua = navigator.userAgent
-  event = (ua.match(/iPad/i)) ? "touchstart" : "click"
+  # ua = navigator.userAgent
+  # # event = (ua.match(/iPad/i)) ? "touchstart" : "click"
+  # event = 'click'
 
   $('.heaven .row:not(:last) .bead, .earth .row:not(:first) .bead')
   .addClass('active')
 
   $('.total').text(0)
 
-  $(".bead").bind event, (e) ->
+  $(".bead").bind 'click', (e) ->
     col = $(this).data('col')
     parent = $(this).parents('div')
 
