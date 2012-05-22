@@ -5,7 +5,8 @@ jQuery ->
 
   $('.total').text(0)
 
-  $('.bead').click ->
+  # $('.bead').click ->
+  $('.bead').bind "touchstart", (e) ->
     col = $(this).data('col')
     parent = $(this).parents('div')
 
