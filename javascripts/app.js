@@ -1,9 +1,14 @@
 (function() {
 
   jQuery(function() {
+    var event, ua, _ref;
+    ua = navigator.userAgent;
+    event = (_ref = ua.match(/iPad/i)) != null ? _ref : {
+      "touchstart": "click"
+    };
     $('.heaven .row:not(:last) .bead, .earth .row:not(:first) .bead').addClass('active');
     $('.total').text(0);
-    return $('.bead').click(function() {
+    return $(".bead").bind(event, function(e) {
       var col, parent, total;
       col = $(this).data('col');
       parent = $(this).parents('div');
