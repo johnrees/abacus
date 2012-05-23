@@ -1,14 +1,22 @@
-.row, a {
+body {
+  font-size: 16px;
+  a {
+    text-decoration: none;
+    color: #888;
+    margin-top: 1em;
+  }
+}
+
+.row, a, .heaven, .earth, .total {
   display: block;
   clear: both;
 }
+
 .bead {
   float: left;
   width: 50px;
   height: 50px;
-  background: url('../images/bead.png');
-  background-repeat: no-repeat;
-  background-position: 0 -50px;
+  background: url('../images/bead.png') no-repeat 0 -50px;
   margin-right: 5px;
   &.active {
     background-position: 0 0;
@@ -19,7 +27,6 @@
 .heaven, .earth {
   display: inline-block;
   overflow: hidden;
-  clear: both;
 }
 
 .heaven {
@@ -27,6 +34,5 @@
 }
 
 .total {
-  font-size: 50px;
-  clear: both;
+  font-size: 3em;
 }
