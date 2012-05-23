@@ -4,9 +4,9 @@ moveBead = (e) ->
   parent = $(this).parents('div')
 
   parent.find(".bead[data-col=#{col}]").addClass('active')
-  $(".bead").bind 'click', moveBead
   $(this).removeClass('active')
-  $(this).unbind 'click', moveBead
+
+  $('.bead.active').bind 'click', moveBead
 
   total = 0
   col = 0
