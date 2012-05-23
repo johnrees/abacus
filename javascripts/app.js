@@ -5,7 +5,7 @@
     var col, parent, total;
     $('.bead').unbind('click', moveBead);
     col = $(this).data('col');
-    parent = $(this).parents('div');
+    parent = $(this).parents('div.divide');
     parent.find(".bead[data-col=" + col + "]").addClass('active');
     $(this).removeClass('active');
     $('.bead.active').bind('click', moveBead);
